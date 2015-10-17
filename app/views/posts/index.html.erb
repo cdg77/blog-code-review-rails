@@ -2,9 +2,7 @@
 
 <ul>
   <% @posts.each do |post| %>
-    <li><%= post.title %></li>
-    <li><%= post.author %></li>
-    <li><%= post.body %></li>
-    <li><img src="<%= post.images %>" alt="" /></li>
+    <li><%= link_to post.title, post_path(post) %></li>
+
   <% end %>
 </ul>

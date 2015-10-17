@@ -1,0 +1,10 @@
+<h1><%= @post.title %></h1>
+
+<p><%= @post.author %></p>
+<p><%= @post.body %></p>
+<p><img src="<%= @post.images %>" alt="<%= @post.title %>" /></p>
+ <br>
+ <hr>
+<p>
+  <%= link_to "Go back to list of Posts", posts_path %>
+</p>
