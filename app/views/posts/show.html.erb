@@ -5,6 +5,7 @@
 <p><img src="<%= @post.images %>" alt="<%= @post.title %>" /></p>
  <br>
  <hr>
-<p>
-  <%= link_to "Go back to list of Posts", posts_path %>
-</p>
+
+<p><%= link_to "Go back to list of Posts", posts_path %></p>
+<p><%= link_to "Edit this post", edit_post_path(@post) %></p>
+<p><%= link_to "Delete this post", post_path(@post), :data => {:confirm => "You sure you wanna delete this?", :method => "delete"} %></p>
