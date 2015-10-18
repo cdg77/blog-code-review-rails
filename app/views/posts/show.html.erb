@@ -9,3 +9,19 @@
 <p><%= link_to "Go back to list of Posts", posts_path %></p>
 <p><%= link_to "Edit this post", edit_post_path(@post) %></p>
 <p><%= link_to "Delete this post", post_path(@post), :data => {:confirm => "You sure you wanna delete this?", :method => "delete"} %></p>
+<hr>
+
+<% if @post.tags.any? %>
+<h4>TAGS: </h4><hr>
+  <ul>
+    <% @post.tags.each do |tag| %>
+      <li>
+        <%= tag.description %>
+      </li>
+    <% end %>
+  </ul>
+  <% else %>
+  <h4>This blog post has not been tagged</h4>
+<% end %>
+
+<p><%= link_to "Add a Tag to this Post", new_post_tag_path(@post) %></p>
