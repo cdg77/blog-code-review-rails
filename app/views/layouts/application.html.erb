@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BlogCodeReview</title>
+  <!-- <title>BlogCodeReview</title> -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <title><%= yield(:title) %></title>
+
 </head>
 <body>
 
   <div class='container'>
+    <h2><bold><%= yield(:title) %></bold></h2>
     <%= yield %>
   </div>
 
