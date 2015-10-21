@@ -1,14 +1,25 @@
 <%= render 'layouts/errors', :object => @post %>
-
-<%= form_for @post do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :author %>
-  <%= f.text_field :author %>
-  <%= f.label :images %>
-  <%= f.text_field :images %>
-  <%= f.label :body %>
-  <%= f.text_field :body %>
-
-  <%= f.submit  %>
-<% end %>
+  <%= form_for @post do |f| %>
+    <div class="form-group well">
+      <div class="form-inline">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+      <div class="form-inline">
+        <%= f.label :author %>
+        <%= f.text_field :author %>
+      </div>
+      <div class="form-inline">
+        <%= f.label :images %>
+        <%= f.text_field :images %>
+      </div>
+      <div class="form-inline">
+        <%= f.label :body %>
+        <%= f.text_field :body %>
+      </div>
+      <div class="form-inline">
+        <%= f.submit  %>
+      </div>
+    </div>
+  <% end %>
+</div>

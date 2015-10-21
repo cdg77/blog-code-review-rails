@@ -8,7 +8,7 @@ class TagsController < ApplicationController
     @post = Post.find(params[:post_id])
     @tag = @post.tags.new(tag_params)
     if @tag.save
-      redirect_to post_path(@tag.post)
+      redirect_to post_path(@post)
     else
       render :new
     end
