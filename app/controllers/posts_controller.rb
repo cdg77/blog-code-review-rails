@@ -18,8 +18,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
+      flash[:notice] = 'Great!  We are blogging now!'
       redirect_to posts_path
     else
+      flash[:alert] = 'Oops... Something went wrong!'
       render :new
     end
   end
@@ -33,6 +35,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to posts_path
+
     else
       render :edit
     end
