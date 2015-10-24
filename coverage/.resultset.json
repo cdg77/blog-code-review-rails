@@ -648,6 +648,19 @@
         1,
         null
       ],
+      "/Users/Apollo/Code/epicodus/code-reviews/blog-code-review/spec/features/tag_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
       "/Users/Apollo/Code/epicodus/code-reviews/blog-code-review/spec/models/post_spec.rb": [
         1,
         null,
@@ -675,6 +688,6 @@
         null
       ]
     },
-    "timestamp": 1445647308
+    "timestamp": 1445653345
   }
 }
