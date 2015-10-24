@@ -1,5 +1,4 @@
-<h1>Blog Posts</h1>
-
+<% content_for(:title, "Blog | Welcome to Hack Blog") %>
 <ul>
   <% @posts.each do |post| %>
     <li><%= link_to post.title, post_path(post) %></li>
